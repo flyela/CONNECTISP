@@ -3,16 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegistroComponent } from './registro/registro.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 
 const routes: Routes = [
 
-  {path: '', component: LoginComponent },
+  {path: '', redirectTo:'login', pathMatch: 'full'},
   {path:'main', component: MainComponent},
   {path:'login', component: LoginComponent},
   {path:'usuarios', component: UsuariosComponent},
-  {path:'registro', component: RegistroComponent}
+  {path:'registro', component: RegistroComponent},
+  {path: '**', redirectTo:'login', pathMatch: 'full'},
 
 ];
 

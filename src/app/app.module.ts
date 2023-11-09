@@ -10,6 +10,19 @@ import { MainComponent } from './main/main.component';
 import { OAuthModule } from 'angular-oauth2-oidc'; 
 import{HttpClientModule} from '@angular/common/http';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
+import { FormsModule } from '@angular/forms';
+import {AngularFireModule} from '@angular/fire/compat';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBql3OJLVdNAqgJj8Zg3CWDAMstKghCsrw",
+  authDomain: "bdconnectisp.firebaseapp.com",
+  projectId: "bdconnectisp",
+  storageBucket: "bdconnectisp.appspot.com",
+  messagingSenderId: "83704699353",
+  appId: "1:83704699353:web:e0db2feee10795b85561c8",
+  measurementId: "G-PY0GN8Q2LQ"
+};
 
 @NgModule({
   declarations: [
@@ -24,7 +37,9 @@ import { EmpleadosComponent } from './components/empleados/empleados.component';
     BrowserModule,
     AppRoutingModule,
     OAuthModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig)
     
   ],
   providers: [],

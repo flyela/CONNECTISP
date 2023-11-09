@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import {AngularFireAuth} from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class AuthService {
 
   constructor(private afauth: AngularFireAuth) { }
 
@@ -44,11 +43,4 @@ export class UsuarioService {
       return null;
     }
   }
-
- 
-
-
-
-
-
 }

@@ -1,25 +1,26 @@
+
 <section>
-<div class="container">
-    <div class="card text-center ">
-        <div class="card-header">
-             <b>INICIAR SESION</b>
+        <div class="container">
+            <div class="card text-center ">
+                <div class="card-header">
+                     <b>INICIAR SESION</b>
+                </div>
+        
+                <div class="card-body p-4" >
+                    <label style="float: left; font-family: bold;">Correo</label>
+                    <input class="form-control m-2" type="email" name="email" required [(ngModel)]="usuario.email">
+        
+        
+                    <label style="float: left; font-family: bold;">Contraseña</label>
+                    <input class="form-control m-2" type="password" name="password" required [(ngModel)]="usuario.password">
+        
+                    <button class="btn btn-primary btn-block" (click)="Ingresar()">Ingresar</button>
+                    <button class="btn btn-info btn-block" (click)="IngresarConGoogle()" >Ingresar Con Google</button>
+        
+                    <label style="font-family: bold;">¡Aún no tienes Cuenta? <a href="registro">Registrarse</a></label>
+        
+        
+                </div>
+            </div>
         </div>
-
-        <div class="card-body p-4" >
-            <label style="float: left; font-family: bold;">Correo</label>
-            <input class="form-control m-2" type="email" name="email" required [(ngModel)]="usuario.email">
-
-
-            <label style="float: left; font-family: bold;">Contraseña</label>
-            <input class="form-control m-2" type="password" name="password" required [(ngModel)]="usuario.password">
-
-            <button class="btn btn-primary btn-block">Ingresar</button>
-            <button class="btn btn-info btn-block">Ingresar Con Google</button>
-
-            <label style="font-family: bold;">¡Aún no tienes Cuenta? <a href="#">Registrarse</a></label>
-
-
-        </div>
-    </div>
-</div>
 </section>

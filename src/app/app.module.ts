@@ -12,8 +12,9 @@ import{HttpClientModule} from '@angular/common/http';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { FormsModule } from '@angular/forms';
 import {AngularFireModule} from '@angular/fire/compat';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
-
+// declaracion de firebase config paquete de internet - no tengo los enverioments
 const firebaseConfig = {
   apiKey: "AIzaSyBql3OJLVdNAqgJj8Zg3CWDAMstKghCsrw",
   authDomain: "bdconnectisp.firebaseapp.com",
@@ -31,7 +32,8 @@ const firebaseConfig = {
     UsuariosComponent,
     RegistroComponent,
     MainComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

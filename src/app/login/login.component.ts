@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Auth } from '@firebase/auth';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +13,25 @@ export class LoginComponent {
     password: '',
   }
 
-  /*constructor(private autService: AuthService){
+  constructor(private authService:AuthService){
       
-  }*/
+ }
 
-  Acceder() {
+  Ingresar() {
 
     console.log(this.usuario);
+    const {email, password}= this.usuario;
+    this.authService.registrar(email, password).then(res => {
+      console.log("se registro")
+    })
+  }
+
+  IngresarConGoogle(){
+    const {email, password}= this.usuario;
+    this.authService.loginWhitGoogle(email, password).then(res => {
+      console.log("se registro")
+    })
+
   }
 
 }
